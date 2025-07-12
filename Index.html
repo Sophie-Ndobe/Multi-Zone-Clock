@@ -4,20 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multi TimeZone Clock</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.6.0/moment-timezone-with-data-1970-2030.min.js"></script>
+
     <link rel="stylesheet" href="src/style.css">
+
 </head>
 <body>
+    <h1>World Clock</h1>
     <select>
         <option value="">Select a city</option>
-        <option value="">New York</option>
-        <option value="">Tokyo</option>
-        <option value="">Maseru</option>
-        <option value="">Lagos</option>
-        <option value="">Madrid</option>
-        <option value="">Auckland</option>
-        <option value="">Sao Paulo</option>
+        <option value="new-york">New York</option>
+        <option value="tokyo">Tokyo</option>
+        <option value="maseru">Maseru</option>
+        <option value="lagos">Lagos</option>
+        <option value="madrid">Madrid</option>
+        <option value="auckland">Auckland</option>
+        <option value="sao-paulo">Sao Paulo</option>
     </select>
-
+    <h2>Paris</h2>
+    <div>April 17, 2025</div>
+    <div>15:05:25 AM</div>
+    <h2>Shanghai</h2>
+    <div>April 17, 2025</div>
+    <div>15:05:25 AM</div>
+<footer>Built with ❤️ and a lot of coffee by <a href="https://github.com/Sophie-Ndobe?tab=repositories"><strong>Sophie Ndobe</strong></a>   —  <a href="https://github.com/Sophie-Ndobe/Multi-Zone-Clock">open-sourced</a>  and live on <a href="https://multizoneclock.netlify.app/">Netlify</a>  !</footer>
     <script src="src/index.js"></script>
 </body>
 </html>
