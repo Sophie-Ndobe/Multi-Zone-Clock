@@ -19,29 +19,31 @@
     <div class="container">
 
         <h1>World Clock</h1>
-        <select>
+        <select id="cities">
             <option value="">Select a city...</option>
-            <option value="new-york">New York</option>
-            <option value="tokyo">Tokyo</option>
-            <option value="maseru">Maseru</option>
-            <option value="lagos">Lagos</option>
-            <option value="madrid">Madrid</option>
-            <option value="auckland">Auckland</option>
-            <option value="sao-paulo">Sao Paulo</option>
+            <option value="America/New_York">New York</option>
+            <option value="Asia/Tokyo">Tokyo</option>
+            <option value="Africa/Maseru">Maseru</option>
+            <option value="Africa/Lagos">Lagos</option>
+            <option value="Europe/Madrid">Madrid</option>
+            <option value="Pacific/Auckland">Auckland</option>
+            <option value="America/Sao_Paulo">Sao Paulo</option>
         </select>
-        <div class="city">
-            <div>
-                <h2>Paris</h2>
-                <div class="date" id="par-date">April 17th, 2025</div>
+        <div id="cities-update">
+            <div class="city">
+                <div>
+                    <h2>Europe/Paris</h2>
+                    <div class="date" id="par-date">April 17th, 2025</div>
+                </div>
+                <div class="time" id="par-time">15:05:25 <small>AM</small></div>
             </div>
-            <div class="time" id="par-time">15:05:25 <small>AM</small></div>
-        </div>
-        <div class="city">
-            <div>
-                <h2>Shanghai</h2>
-                <div class="date" id="sha-date">April 17th, 2025</div>
+            <div class="city">
+                <div>
+                    <h2>Asia/Shanghai</h2>
+                    <div class="date" id="sha-date">April 17th, 2025</div>
+                </div>
+                <div class="time" id="sha-time">22:55:45 <small>AM</small></div>
             </div>
-            <div class="time" id="sha-time">22:55:45 <small>AM</small></div>
         </div>
 
     </div>
