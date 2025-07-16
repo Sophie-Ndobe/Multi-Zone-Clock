@@ -5,7 +5,7 @@ function timeDateUpdate() {
     parisDateElement.innerHTML = updatedParisDate;
 
     let parisTimeElement = document.querySelector("#par-time");
-    let updatedParisTime = moment.tz("Europe/Paris").format("h:mm:ss [<small>] A[</small>]");
+    let updatedParisTime = moment.tz("Europe/Paris").format("H:mm:ss [<small>] A[</small>]");
     parisTimeElement.innerHTML = updatedParisTime;
 
     //Shanghai
@@ -14,7 +14,7 @@ function timeDateUpdate() {
     shanghaiDateElement.innerHTML = updatedShanghaiDate;
 
     let shanghaiTimeElement = document.querySelector("#sha-time");
-    let updatedShanghaiTime = moment.tz("Asia/Shanghai").format("h:mm:ss [<small>] A[</small>]");
+    let updatedShanghaiTime = moment.tz("Asia/Shanghai").format("H:mm:ss [<small>] A[</small>]");
     shanghaiTimeElement.innerHTML = updatedShanghaiTime;
 }
 
