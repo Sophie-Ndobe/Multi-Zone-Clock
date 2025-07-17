@@ -54,6 +54,32 @@ function updateTimeDate(event){
                     <h2>${cityName}</h2>
                     <div class="date">${changedCityDate}</div>
                 </div>
+                <div class="clock-body">
+                    <div class="hour hour-12">XII</div>
+                    <div class="hour hour-3">III</div>
+                    <div class="hour hour-6">VI</div>
+                    <div class="hour hour-9">IX</div>
+                    <div class="hour-hand-container" id="hour-hand">
+                        <div class="hour-hand">
+                            <div class="hand"></div>
+                            <div class="arrow">▲</div>
+                        </div>
+                    </div>
+
+                    <div class="minute-hand-container" id="minute-hand">
+                        <div class="minute-hand">
+                            <div class="hand"></div>
+                            <div class="arrow">▲</div>
+                        </div>
+                    </div>
+
+                    <div class="second-hand-container" id="second-hand">
+                        <div class="second-hand">
+                            <div class="hand"></div>
+                            <div class="arrow">▲</div>
+                        </div>
+                    </div>
+                </div>
                 <div class="time">${changedCityTime}</div>
             </div>
          `;
