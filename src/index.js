@@ -76,7 +76,6 @@ function updateTimeDate(event){
                     <div class="second-hand-container" id="second-hand">
                         <div class="second-hand">
                             <div class="hand"></div>
-                            <div class="arrow">▲</div>
                         </div>
                     </div>
                 </div>

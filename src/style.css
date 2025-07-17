@@ -100,4 +100,93 @@ a:hover {
 
 .hour {
     font-size:14px;
+    font-weight:800;
+    position:absolute;
+}
+
+.hour-12 {
+    top: 5px;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.hour-3 {
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+}
+
+.hour-6 {
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hour-9 {
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+}
+
+.hour-hand-container,
+.minute-hand-container,
+.second-hand-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hour-hand .hand {
+    width: 5px;
+    height: 70px;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hour-hand .arrow {
+    font-size: 20px;
+    font-weight: 800;
+    color: #ffffff;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.minute-hand {
+    position: relative;
+}
+
+.minute-hand .hand {
+    width: 3px;
+    height: 100px;
+    background-color: black;
+    position:absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%)rotate(180deg);
+}
+
+.minute-hand .arrow {
+    font-size: 15px;
+    font-weight: 800;
+    color:black;
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+    bottom: 90px
+}
+
+.second-hand .hand {
+    width: 1px;
+    height:85px;
+    background-color: black;
+    position: absolute;
+    bottom:0;
+    left: 50%;
+    transform: translateX(-50%);
 }
