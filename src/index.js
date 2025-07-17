@@ -1,21 +1,33 @@
 function timeDateUpdate() {
     //Paris
     let parisDateElement = document.querySelector("#par-date");
-    let updatedParisDate = moment().format("MMMM Do, YYYY");
-    parisDateElement.innerHTML = updatedParisDate;
+    let updatedParisDate = moment.tz("Europe/Paris").format("MMMM Do, YYYY");
+
+    if(parisDateElement) {
+        parisDateElement.innerHTML = updatedParisDate;
+    }
 
     let parisTimeElement = document.querySelector("#par-time");
     let updatedParisTime = moment.tz("Europe/Paris").format("H:mm:ss [<small>] A[</small>]");
-    parisTimeElement.innerHTML = updatedParisTime;
+
+    if(parisTimeElement) {
+        parisTimeElement.innerHTML = updatedParisTime;
+    }
 
     //Shanghai
     let shanghaiDateElement =  document.querySelector("#sha-date")
-    let updatedShanghaiDate = moment().format("MMMM Do, YYYY");
-    shanghaiDateElement.innerHTML = updatedShanghaiDate;
+    let updatedShanghaiDate = moment.tz("Asia/Shanghai").format("MMMM Do, YYYY");
+
+    if(shanghaiDateElement) {
+        shanghaiDateElement.innerHTML = updatedShanghaiDate;
+    }
 
     let shanghaiTimeElement = document.querySelector("#sha-time");
     let updatedShanghaiTime = moment.tz("Asia/Shanghai").format("H:mm:ss [<small>] A[</small>]");
-    shanghaiTimeElement.innerHTML = updatedShanghaiTime;
+
+    if(shanghaiTimeElement) {
+        shanghaiTimeElement.innerHTML = updatedShanghaiTime;
+    }
 }
 
 function updateTimeDate(event){
