@@ -204,15 +204,23 @@ a:hover {
     display: none;
 }
 
+.updated-city-page a {
+    text-decoration: none;
+    background-color: #adadc9;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 400;
+}
 
-/*
-.updated-city-page h2 {
-    font-size: 38px;
-}*/
+.updated-city-page a:hover {
+    color:#ffffff;
+    background-color: #65659a;
+}
 
 .updated-city-page .city{
     display: block;
     margin: 0 auto;
+    border: none;
 }
 .updated-city-page .date {
     margin-bottom: 40px;
@@ -221,4 +229,5 @@ a:hover {
 
 .updated-city-page .time {
     margin-top: 40px;
+    margin-bottom: 40px;
 }

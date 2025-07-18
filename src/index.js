@@ -76,6 +76,10 @@ function updateTimeDate(event){
                 </div>
             </div>
             <div class="time" id="updated-time">${changedCityTime}</div>
+            <div>
+                <a href="/">Back to Home</a>
+            </div>
+
         </div>
          `;
 
