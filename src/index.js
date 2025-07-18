@@ -46,40 +46,42 @@ function updateTimeDate(event){
     let changedCityTime = moment.tz(changedCity).format("H:mm:ss [<small>] A[</small>]");
 
     let citiesUpdateElement = document.querySelector("#cities-update")
-        citiesUpdateElement.innerHTML = `
-            <div class="city">
-                <div>
-                    <h2>${cityName}</h2>
-                    <div class="date" id="updated-date">${changedCityDate}</div>
-                </div>
-                <div class="clock-body">
-                    <div class="hour hour-12">XII</div>
-                    <div class="hour hour-3">III</div>
-                    <div class="hour hour-6">VI</div>
-                    <div class="hour hour-9">IX</div>
-                    <div class="hour-hand-container" id="hour-hand">
-                        <div class="hour-hand">
-                            <div class="hand"></div>
-                            <div class="arrow">▲</div>
-                        </div>
-                    </div>
-
-                    <div class="minute-hand-container" id="minute-hand">
-                        <div class="minute-hand">
-                            <div class="hand"></div>
-                            <div class="arrow">▲</div>
-                        </div>
-                    </div>
-
-                    <div class="second-hand-container" id="second-hand">
-                        <div class="second-hand">
-                            <div class="hand"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="time" id="updated-time">${changedCityTime}</div>
+    citiesUpdateElement.innerHTML = `
+        <div class="city">
+            <div>
+                <h2>${cityName}</h2>
+                <div class="date" id="updated-date">${changedCityDate}</div>
             </div>
+            <div class="clock-body">
+                <div class="hour hour-12">XII</div>
+                <div class="hour hour-3">III</div>
+                <div class="hour hour-6">VI</div>
+                <div class="hour hour-9">IX</div>
+                <div class="hour-hand-container" id="hour-hand">
+                    <div class="hour-hand">
+                        <div class="hand"></div>
+                        <div class="arrow">▲</div>
+                    </div>
+                </div>
+                <div class="minute-hand-container" id="minute-hand">
+                    <div class="minute-hand">
+                        <div class="hand"></div>
+                        <div class="arrow">▲</div>
+                    </div>
+                </div>
+                <div class="second-hand-container" id="second-hand">
+                    <div class="second-hand">
+                        <div class="hand"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="time" id="updated-time">${changedCityTime}</div>
+        </div>
          `;
+
+
+    let containerElement = document.querySelector("#container");
+    containerElement.classList.add("updated-city-page");
 
     selectedCityInterval = setInterval(() => {
         let updatedDate = moment().format("MMMM Do, YYYY");

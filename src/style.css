@@ -96,7 +96,6 @@ a:hover {
     border-radius:50%;
     margin: 0 auto;
     position: relative;
-    margin-left:50px;
 }
 
 .hour {
@@ -190,4 +189,36 @@ a:hover {
     bottom:0;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.updated-city-page {
+    text-align: center;
+    max-width: 400px;
+}
+
+.updated-city-page h1 {
+    display: none;
+}
+
+.updated-city-page select {
+    display: none;
+}
+
+
+/*
+.updated-city-page h2 {
+    font-size: 38px;
+}*/
+
+.updated-city-page .city{
+    display: block;
+    margin: 0 auto;
+}
+.updated-city-page .date {
+    margin-bottom: 40px;
+    font-size: 14px;
+}
+
+.updated-city-page .time {
+    margin-top: 40px;
 }
