@@ -33,6 +33,10 @@ function timeDateUpdate() {
 function updateTimeDate(event){
     let changedCity = event.target.value;
 
+    if (changedCity === "current") {
+        changedCity = moment.tz.guess();
+    }
+
     if (selectedCityInterval) {
         clearInterval(selectedCityInterval);
     }
