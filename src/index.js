@@ -30,22 +30,22 @@ function timeDateUpdate() {
     }
 }
 
-let selectedCityInterval;
-
 function updateTimeDate(event){
     let changedCity = event.target.value;
 
     if (selectedCityInterval) {
         clearInterval(selectedCityInterval);
-
     }
 
+    if (analogClockInterval) {
+        clearInterval(analogClockInterval);
+    }
 
     function updatedSelectedCityInfor() {
         let cityName = changedCity.replace("_", " ").split("/")[1];
         //console.log(cityName);
         let changedCityDate = moment().format("MMMM Do, YYYY");
-         let changedCityTime = moment.tz(changedCity).format("H:mm:ss [<small>] A[</small>]");
+        let changedCityTime = moment.tz(changedCity).format("H:mm:ss [<small>] A[</small>]");
 
         let citiesUpdateElement = document.querySelector("#cities-update")
         citiesUpdateElement.innerHTML = `
@@ -86,17 +86,34 @@ function updateTimeDate(event){
 
     updatedSelectedCityInfor();
     selectedCityInterval = setInterval(updatedSelectedCityInfor, 1000);
+
+    analogClockInterval = setInterval(() => {
+            let timeZone = moment.tz(changedCity);
+
+            let second = timeZone.second() *6;
+            let minute = timeZone.minute() *6;
+            let hour = timeZone.hour() % 12 * 30 + Math.round(minute / 12);
+
+            let secondHandElement = document.querySelector("#second-hand");
+            secondHandElement.style.transform = "rotate(" + second + "deg)";
+
+            let minuteHandElement = document.querySelector("#minute-hand");
+            minuteHandElement.style.transform = "rotate(" + minute + "deg)";
+
+            let hourHandElement = document.querySelector("#hour-hand");
+            hourHandElement.style.transform = "rotate(" + hour + "deg)";
+
+        }, 1000);
 }
 
 timeDateUpdate();
 setInterval(timeDateUpdate, 1000);
 
-
-
 let selectElement = document.querySelector("#cities");
 selectElement.addEventListener("change", updateTimeDate);
 
-
+let selectedCityInterval;
+let analogClockInterval;
 
 
 
