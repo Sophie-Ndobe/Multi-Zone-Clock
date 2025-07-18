@@ -45,7 +45,7 @@ function updateTimeDate(event){
         clearInterval(analogClockInterval);
     }
 
-    let cityName = changedCity.replace("_", " ").split("/")[1];
+    let cityName = changedCity.replace("_", " ");
     let changedCityDate = moment().format("MMMM Do, YYYY");
     let changedCityTime = moment.tz(changedCity).format("H:mm:ss [<small>] A[</small>]");
 
