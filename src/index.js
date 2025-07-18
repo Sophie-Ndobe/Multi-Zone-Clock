@@ -1,5 +1,4 @@
 function timeDateUpdate() {
-    //Paris
     let parisDateElement = document.querySelector("#par-date");
     let updatedParisDate = moment.tz("Europe/Paris").format("MMMM Do, YYYY");
 
@@ -14,7 +13,6 @@ function timeDateUpdate() {
         parisTimeElement.innerHTML = updatedParisTime;
     }
 
-    //Shanghai
     let shanghaiDateElement =  document.querySelector("#sha-date")
     let updatedShanghaiDate = moment.tz("Asia/Shanghai").format("MMMM Do, YYYY");
 
