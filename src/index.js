@@ -41,18 +41,16 @@ function updateTimeDate(event){
         clearInterval(analogClockInterval);
     }
 
-    function updatedSelectedCityInfor() {
-        let cityName = changedCity.replace("_", " ").split("/")[1];
-        //console.log(cityName);
-        let changedCityDate = moment().format("MMMM Do, YYYY");
-        let changedCityTime = moment.tz(changedCity).format("H:mm:ss [<small>] A[</small>]");
+    let cityName = changedCity.replace("_", " ").split("/")[1];
+    let changedCityDate = moment().format("MMMM Do, YYYY");
+    let changedCityTime = moment.tz(changedCity).format("H:mm:ss [<small>] A[</small>]");
 
-        let citiesUpdateElement = document.querySelector("#cities-update")
+    let citiesUpdateElement = document.querySelector("#cities-update")
         citiesUpdateElement.innerHTML = `
             <div class="city">
                 <div>
                     <h2>${cityName}</h2>
-                    <div class="date">${changedCityDate}</div>
+                    <div class="date" id="updated-date">${changedCityDate}</div>
                 </div>
                 <div class="clock-body">
                     <div class="hour hour-12">XII</div>
@@ -79,13 +77,18 @@ function updateTimeDate(event){
                         </div>
                     </div>
                 </div>
-                <div class="time">${changedCityTime}</div>
+                <div class="time" id="updated-time">${changedCityTime}</div>
             </div>
          `;
-    }
 
-    updatedSelectedCityInfor();
-    selectedCityInterval = setInterval(updatedSelectedCityInfor, 1000);
+    selectedCityInterval = setInterval(() => {
+        let updatedDate = moment().format("MMMM Do, YYYY");
+        let updatedTime = moment.tz(changedCity).format("H:mm:ss [<small>] A[</small>]");
+
+        document.querySelector("#updated-date").innerHTML = updatedDate;
+        document.querySelector("#updated-time").innerHTML = updatedTime
+
+    }, 1000);
 
     analogClockInterval = setInterval(() => {
             let timeZone = moment.tz(changedCity);
